@@ -1,3 +1,9 @@
 [submodule "mbedtls"]
 	path = mbedtls
 	url = https://github.com/ARMmbed/mbedtls
+[submodule "cosemserver"]
+	path = cosemserver
+	url = git@github.com:aarkhang/cosemserver.git
+[submodule "cosemclient"]
+	path = cosemclient
+	url = git@github.com:aarkhang/cosemclient.git
