@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.12)
 project(cosemlib VERSION 1.0
                   DESCRIPTION "DLMS/COSEM stack library"
                   LANGUAGES C)
+                  
+option(COSEM_BUILD_EXAMPLES "Build examples" OFF)
 
 add_library(cosemlib STATIC )
 
@@ -95,3 +97,25 @@ target_sources( cosemlib PRIVATE
      ${COSEMLIB_SOURCES}
      ${COSEMLIB_HEADERS}
 )
+
+if(COSEM_BUILD_EXAMPLES)
+    add_subdirectory(cosemserver)
+    add_subdirectory(cosemclient)
+endif()
+
+include(CMakePrintHelpers)
+include(FeatureSummary)
+
+# Configuration information
+cmake_print_variables(CMAKE_SYSTEM_NAME)
+cmake_print_variables(CMAKE_CXX_COMPILER)
+get_property(_isMultiConfig GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
+if(_isMultiConfig)
+  cmake_print_variables(CMAKE_CONFIGURATION_TYPES)
+else()
+  cmake_print_variables(CMAKE_BUILD_TYPE)
+endif()
+
+cmake_print_variables(COSEM_BUILD_EXAMPLES)
+message(STATUS "Feature Summary:" )
+feature_summary(WHAT ENABLED_FEATURES DISABLED_FEATURES PACKAGES_FOUND)
