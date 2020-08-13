@@ -1,7 +1,7 @@
 # =========================
 # Project generated files
 # =========================
-build/output/
+build*/
 
 # =========================
 # Operating System Files
