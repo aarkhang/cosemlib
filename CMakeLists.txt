@@ -4,7 +4,7 @@ project(cosemlib VERSION 1.0
                   DESCRIPTION "DLMS/COSEM stack library"
                   LANGUAGES C)
                   
-option(COSEM_BUILD_EXAMPLES "Build examples" OFF)
+option(COSEM_BUILD_EXAMPLES "Build examples" ON)
 
 add_library(cosemlib STATIC )
 
