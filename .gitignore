@@ -64,6 +64,7 @@ build-cosemlib-Desktop_Qt*
 # Tools
 # =========================
 .vscode
+.vs
 .settings
 
 \.directory

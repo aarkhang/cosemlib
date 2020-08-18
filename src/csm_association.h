@@ -56,7 +56,7 @@ enum csm_referencing
     NOTE 1 With mechanism_id(2), the method of processing the challenge is secret.
     NOTE 2 The use of authentication mechanisms 3 and 4 are not recommended for new implementations.
 */
-enum csm_auth_level
+typedef enum _csm_auth_level
 {
     CSM_AUTH_LOWEST_LEVEL       = 0U,
     CSM_AUTH_LOW_LEVEL          = 1U,
@@ -65,7 +65,7 @@ enum csm_auth_level
     CSM_AUTH_HIGH_LEVEL_SHA1    = 4U,
     CSM_AUTH_HIGH_LEVEL_GMAC    = 5U,
     CSM_AUTH_HIGH_LEVEL_SHA256  = 6U
-};
+} csm_auth_level;
 
 typedef enum
 {
@@ -176,7 +176,7 @@ typedef struct
     // Current state and parameters of the association
     enum state_cf state_cf;
     enum csm_referencing ref;
-    enum csm_auth_level auth_level;
+    enum _csm_auth_level auth_level;
     uint8_t client_app_title[CSM_DEF_APP_TITLE_SIZE];
     uint8_t server_app_title[CSM_DEF_APP_TITLE_SIZE];
 
