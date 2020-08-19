@@ -9,4 +9,4 @@
 	url = git@github.com:aarkhang/cosemclient.git
 [submodule "cpp11-on-multicore"]
 	path = cpp11-on-multicore
-	url = https://github.com/preshing/cpp11-on-multicore.git
+	url = git@github.com:aarkhang/cpp11-on-multicore.git

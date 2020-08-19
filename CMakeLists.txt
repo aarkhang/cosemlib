@@ -101,6 +101,7 @@ target_sources( cosemlib PRIVATE
 if(COSEM_BUILD_EXAMPLES)
     add_subdirectory(cosemserver)
     add_subdirectory(cosemclient)
+    add_subdirectory(cpp11-on-multicore)
 endif()
 
 include(CMakePrintHelpers)
